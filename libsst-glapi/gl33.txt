@@ -1,0 +1,388 @@
+//	gl33.txt
+//	Author: Patrick Baggett <ptbaggett@762studios.com>
+//	Created: 12/12/2012
+//	
+//	Purpose: 
+//
+//	OpenGL 3.3 function definitions
+//
+//	License:
+//
+//	This program is free software. It comes without any warranty, to
+//	the extent permitted by applicable law. You can redistribute it
+//	and/or modify it under the terms of the Do What The Fuck You Want
+//	To Public License, Version 2, as published by Sam Hocevar. See
+//	http://sam.zoy.org/wtfpl/COPYING for more details.
+
+// --A-- 
+void ActiveTexture GLenum
+void AttachShader GLuint GLuint
+
+// --B-- 
+void BeginConditionalRender GLuint GLenum
+void BeginQuery GLenum GLuint
+void BeginTransformFeedback GLenum
+void BindAttribLocation GLuint GLuint const_GLchar*
+void BindBuffer GLenum GLuint
+void BindBufferBase GLenum GLuint GLuint
+void BindBufferRange GLenum GLuint GLuint GLintptr GLsizeiptr
+void BindFragDataLocation GLuint GLuint const_GLchar*
+void BindFragDataLocationIndexed GLuint GLuint GLuint const_GLchar*
+void BindFramebuffer GLenum GLuint
+void BindRenderbuffer GLenum GLuint
+void BindSampler GLuint GLuint
+void BindTexture GLenum GLuint
+void BindVertexArray GLuint
+void BlendColor GLclampf GLclampf GLclampf GLclampf
+void BlendEquation GLenum
+void BlendEquationSeparate GLenum GLenum
+void BlendFunc GLenum GLenum
+void BlendFuncSeparate GLenum GLenum GLenum GLenum
+void BlitFramebuffer GLint GLint GLint GLint GLint GLint GLint GLint GLbitfield GLenum
+void BufferData GLenum GLsizeiptr const_GLvoid* GLenum
+void BufferSubData GLenum GLintptr GLsizeiptr const_GLvoid*
+
+// --C-- 
+GLenum CheckFramebufferStatus GLenum
+void ClampColor GLenum GLenum
+void Clear GLbitfield
+void ClearBufferiv GLenum GLint const_GLint*
+void ClearBufferuiv GLenum GLint const_GLuint*
+void ClearBufferfv GLenum GLint const_GLfloat*
+void ClearBufferfi GLenum GLint GLfloat GLint
+void ClearColor GLclampf GLclampf GLclampf GLclampf
+void ClearDepth GLclampd
+void ClearStencil GLint
+GLenum ClientWaitSync GLsync GLbitfield GLuint64
+void ColorMask GLboolean GLboolean GLboolean GLboolean
+void ColorMaski GLuint GLboolean GLboolean GLboolean GLboolean
+void CompileShader GLuint
+void CompressedTexImage1D GLenum GLint GLenum GLsizei GLint GLsizei const_GLvoid*
+void CompressedTexImage2D GLenum GLint GLenum GLsizei GLsizei GLint GLsizei const_GLvoid*
+void CompressedTexImage3D GLenum GLint GLenum GLsizei GLsizei GLsizei GLint GLsizei const_GLvoid*
+void CompressedTexSubImage1D GLenum GLint GLint GLsizei GLenum GLsizei const_GLvoid*
+void CompressedTexSubImage2D GLenum GLint GLint GLint GLsizei GLsizei GLenum GLsizei const_GLvoid*
+void CompressedTexSubImage3D GLenum GLint GLint GLint GLint GLsizei GLsizei GLsizei GLenum GLsizei const_GLvoid*
+void CopyBufferSubData GLenum GLenum GLintptr GLintptr GLsizeiptr
+void CopyTexImage1D GLenum GLint GLenum GLint GLint GLsizei GLint
+void CopyTexImage2D GLenum GLint GLenum GLint GLint GLsizei GLsizei GLint
+void CopyTexSubImage1D GLenum GLint GLint GLint GLint GLsizei
+void CopyTexSubImage2D GLenum GLint GLint GLint GLint GLint GLsizei GLsizei
+void CopyTexSubImage3D GLenum GLint GLint GLint GLint GLint GLint GLsizei GLsizei
+GLuint CreateProgram
+GLuint CreateShader GLenum
+void CullFace GLenum
+
+// --D-- 
+void DeleteBuffers GLsizei const_GLuint*
+void DeleteFramebuffers GLsizei GLuint*
+void DeleteProgram GLuint
+void DeleteQueries GLsizei const_GLuint*
+void DeleteRenderbuffers GLsizei GLuint*
+void DeleteSamplers GLsizei const_GLuint*
+void DeleteShader GLuint
+void DeleteSync GLsync
+void DeleteTextures GLsizei const_GLuint*
+void DeleteVertexArrays GLsizei const_GLuint*
+void DepthFunc GLenum
+void DepthMask GLboolean
+void DepthRange GLclampd GLclampd
+void DetachShader GLuint GLuint
+void Disable GLenum
+void DisableVertexAttribArray GLuint
+void Disablei GLenum GLuint
+void DrawArrays GLenum GLint GLsizei
+void DrawArraysInstanced GLenum GLint GLsizei GLsizei
+void DrawBuffer GLenum
+void DrawBuffers GLsizei const_GLenum*
+void DrawElements GLenum GLsizei GLenum const_GLvoid*
+void DrawElementsBaseVertex GLenum GLsizei GLenum const_GLvoid* GLint
+void DrawElementsInstanced GLenum GLsizei GLenum const_GLvoid* GLsizei
+void DrawElementsInstancedBaseVertex GLenum GLsizei GLenum GLvoid* GLsizei GLint
+void DrawRangeElements GLenum GLuint GLuint GLsizei GLenum const_GLvoid*
+void DrawRangeElementsBaseVertex GLenum GLuint GLuint GLsizei GLenum GLvoid* GLint
+
+//  --E-- 
+void Enable GLenum
+void EnableVertexAttribArray GLuint
+void Enablei GLenum GLuint
+void EndQuery GLenum
+void EndTransformFeedback
+
+// --F-- 
+GLsync FenceSync GLenum GLbitfield
+void Finish
+void Flush
+void FlushMappedBufferRange GLenum GLintptr GLsizeiptr
+void FramebufferRenderbuffer GLenum GLenum GLenum GLuint
+void FramebufferTexture GLenum GLenum GLuint GLint
+void FramebufferTexture1D GLenum GLenum GLenum GLuint GLint
+void FramebufferTexture2D GLenum GLenum GLenum GLuint GLint
+void FramebufferTexture3D GLenum GLenum GLenum GLuint GLint GLint
+void FramebufferTextureLayer GLenum GLenum GLuint GLint GLint
+void FrontFace GLenum
+
+// --G-- 
+void GenBuffers GLsizei GLuint*
+void GenFramebuffers GLsizei GLuint*
+void GenQueries GLsizei GLuint*
+void GenRenderbuffers GLsizei GLuint*
+void GenSamplers GLsizei GLuint*
+void GenTextures GLsizei GLuint*
+void GenVertexArrays GLsizei GLuint*
+void GenerateMipmap GLenum
+void GetBooleanv GLenum GLboolean*
+void GetDoublev GLenum GLdouble*
+void GetFloatv GLenum GLfloat*
+void GetIntegerv GLenum GLint*
+void GetInteger64v GLenum GLint64*
+void GetActiveAttrib GLuint GLuint GLsizei GLsizei* GLint* GLenum* GLchar*
+void GetActiveUniform GLuint GLuint GLsizei GLsizei* GLint* GLenum* GLchar*
+void GetActiveUniformBlockiv GLuint GLuint GLenum GLint*
+void GetActiveUniformBlockName GLuint GLuint GLsizei GLsizei* GLchar*
+void GetActiveUniformName GLuint GLuint GLsizei GLsizei* GLchar*
+void GetActiveUniformsiv GLuint GLsizei const_GLuint* GLenum GLint*
+void GetAttachedShaders GLuint GLsizei GLsizei* GLuint*
+GLint GetAttribLocation GLuint const_GLchar*
+void GetBufferParameteriv GLenum GLenum GLint*
+void GetBufferPointerv GLenum GLenum GLvoid**
+void GetBufferSubData GLenum GLintptr GLsizeiptr GLvoid*
+void GetCompressedTexImage GLenum GLint GLvoid*
+GLenum GetError
+GLint GetFragDataIndex GLuint const_char*
+GLint GetFragDataLocation GLuint const_char*
+void GetFramebufferAttachmentParameteriv GLenum GLenum GLenum GLint*
+void GetMultisamplefv GLenum GLuint GLfloat*
+void GetProgramiv GLuint GLenum GLint*
+void GetProgramInfoLog GLuint GLsizei GLsizei* GLchar*
+void GetQueryObjectiv GLuint GLenum GLint*
+void GetQueryObjectuiv GLuint GLenum GLuint*
+void GetQueryObjecti64v GLuint GLenum GLint64*
+void GetQueryObjectui64v GLuint GLenum GLuint64*
+void GetQueryiv GLenum GLenum GLint*
+void GetRenderbufferParameteriv GLenum GLenum GLint*
+void GetSamplerParameterfv GLuint GLenum GLfloat*
+void GetSamplerParameteriv GLuint GLenum GLint*
+void GetShaderiv GLuint GLenum GLint*
+void GetShaderInfoLog GLuint GLsizei GLsizei* GLchar*
+void GetShaderSource GLuint GLsizei GLsizei* GLchar*
+const_GLubyte* GetString GLenum
+const_GLubyte* GetStringi GLenum GLuint
+void GetSynciv GLsync GLenum GLsizei GLsizei* GLint*
+void GetTexImage GLenum GLint GLenum GLenum GLvoid*
+void GetTexLevelParameterfv GLenum GLint GLenum GLfloat*
+void GetTexLevelParameteriv GLenum GLint GLenum GLint*
+void GetTexParameterfv GLenum GLenum GLfloat*
+void GetTexParameteriv GLenum GLenum GLint*
+void GetTransformFeedbackVarying GLuint GLuint GLsizei GLsizei* GLsizei GLenum* GLchar*
+void GetUniformfv GLuint GLint GLfloat*
+void GetUniformiv GLuint GLint GLint*
+GLuint GetUniformIndices GLuint GLsizei const_GLchar** GLuint*
+GLint GetUniformLocation GLuint const_GLchar*
+void GetVertexAttribdv GLuint GLenum GLdouble*
+void GetVertexAttribfv GLuint GLenum GLfloat*
+void GetVertexAttribiv GLuint GLenum GLint*
+void GetVertexAttribIiv GLuint GLenum GLint*
+void GetVertexAttribIuiv GLuint GLenum GLuint*
+void GetVertexAttribPointerv GLuint GLenum GLvoid**
+
+// --H-- 
+void Hint GLenum GLenum
+
+// --I-- 
+GLboolean IsBuffer GLuint
+GLboolean IsEnabled GLenum
+GLboolean IsEnabledi GLenum GLuint
+GLboolean IsFramebuffer GLuint
+GLboolean IsProgram GLuint
+GLboolean IsQuery GLuint
+GLboolean IsRenderbuffer GLuint
+GLboolean IsSampler GLuint
+GLboolean IsShader GLuint
+GLboolean IsSync GLsync
+GLboolean IsTexture GLuint
+GLboolean IsVertexArray GLuint
+
+// --J-- 
+
+
+// --L-- 
+void LineWidth GLfloat
+void LinkProgram GLuint
+void LogicOp GLenum
+
+// --M-- 
+void* MapBuffer GLenum GLenum
+void* MapBufferRange GLenum GLintptr GLsizeiptr GLbitfield
+void MultiDrawArrays GLenum const_GLint* const_GLsizei* GLsizei
+void MultiDrawElements GLenum const_GLsizei* GLenum const_GLvoid** GLsizei
+void MultiDrawElementsBaseVertex GLenum const_GLsizei* GLenum const_GLvoid** GLsizei GLint*
+
+// --N-- 
+
+// --O-- 
+
+// --P-- 
+void PixelStoref GLenum GLfloat
+void PixelStorei GLenum GLint
+void PointParameterf GLenum GLfloat
+void PointParameteri GLenum GLint
+void PointSize GLfloat
+void PolygonMode GLenum GLenum
+void PolygonOffset GLfloat GLfloat
+void PrimitiveRestartIndex GLuint
+void ProvokingVertex GLenum
+
+// --Q-- 
+void QueryCounter GLuint GLenum
+
+// --R-- 
+void ReadBuffer GLenum
+void ReadPixels GLint GLint GLsizei GLsizei GLenum GLenum GLvoid*
+void RenderbufferStorage GLenum GLenum GLsizei GLsizei
+void RenderbufferStorageMultisample GLenum GLsizei GLenum GLsizei GLsizei
+ 
+// --S-- 
+void SampleCoverage GLclampf GLboolean
+void SampleMaski GLuint GLbitfield
+void SamplerParameterf GLuint GLenum GLfloat
+void SamplerParameteri GLuint GLenum GLint
+void SamplerParameterfv GLuint GLenum const_GLfloat*
+void SamplerParameteriv GLuint GLenum const_GLint*
+void SamplerParameterIiv GLuint GLenum const_GLint*
+void SamplerParameterIuiv GLuint GLenum const_GLuint*
+void Scissor GLint GLint GLsizei GLsizei
+void ShaderSource GLuint GLsizei const_GLchar** const_GLint*
+void StencilFunc GLenum GLint GLuint
+void StencilFuncSeparate GLenum GLenum GLint GLuint
+void StencilMask GLuint
+void StencilMaskSeparate GLenum GLuint
+void StencilOp GLenum GLenum GLenum
+void StencilOpSeparate GLenum GLenum GLenum GLenum
+
+// --T-- 
+void TexBuffer GLenum GLenum GLuint
+void TexImage1D GLenum GLint GLint GLsizei GLint GLenum GLenum const_GLvoid*
+void TexImage2D GLenum GLint GLint GLsizei GLsizei GLint GLenum GLenum const_GLvoid*
+void TexImage2DMultisample GLenum GLsizei GLint GLsizei GLsizei GLboolean
+void TexImage3D GLenum GLint GLint GLsizei GLsizei GLsizei GLint GLenum GLenum const_GLvoid*
+void TexImage3DMultisample GLenum GLsizei GLint GLsizei GLsizei GLsizei GLboolean
+void TexParameterf GLenum GLenum GLfloat
+void TexParameteri GLenum GLenum GLint
+void TexParameterfv GLenum GLenum const_GLfloat*
+void TexParameteriv GLenum GLenum const_GLint*
+void TexParameterIiv GLenum GLenum const_GLint*
+void TexParameterIuiv GLenum GLenum const_GLuint*
+void TexSubImage1D GLenum GLint GLint GLsizei GLenum GLenum const_GLvoid*
+void TexSubImage2D GLenum GLint GLint GLint GLsizei GLsizei GLenum GLenum const_GLvoid*
+void TexSubImage3D GLenum GLint GLint GLint GLint GLsizei GLsizei GLsizei GLenum GLenum const_GLvoid*
+void TransformFeedbackVaryings GLuint GLsizei const_GLchar** GLenum
+
+// --U-- 
+void Uniform1f GLint GLfloat
+void Uniform2f GLint GLfloat GLfloat
+void Uniform3f GLint GLfloat GLfloat GLfloat
+void Uniform4f GLint GLfloat GLfloat GLfloat GLfloat
+void Uniform1i GLint GLint
+void Uniform2i GLint GLint GLint
+void Uniform3i GLint GLint GLint GLint
+void Uniform4i GLint GLint GLint GLint GLint
+void Uniform1ui GLint GLuint
+void Uniform2ui GLint GLuint GLuint
+void Uniform3ui GLint GLuint GLuint GLuint
+void Uniform4ui GLint GLuint GLuint GLuint GLuint
+void Uniform1fv GLint GLsizei const_GLfloat*
+void Uniform2fv GLint GLsizei const_GLfloat*
+void Uniform3fv GLint GLsizei const_GLfloat*
+void Uniform4fv GLint GLsizei const_GLfloat*
+void Uniform1iv GLint GLsizei const_GLint*
+void Uniform2iv GLint GLsizei const_GLint*
+void Uniform3iv GLint GLsizei const_GLint*
+void Uniform4iv GLint GLsizei const_GLint*
+void Uniform1uiv GLint GLsizei const_GLuint*
+void Uniform2uiv GLint GLsizei const_GLuint*
+void Uniform3uiv GLint GLsizei const_GLuint*
+void Uniform4uiv GLint GLsizei const_GLuint*
+void UniformMatrix2fv GLint GLsizei GLboolean const_GLfloat*
+void UniformMatrix3fv GLint GLsizei GLboolean const_GLfloat*
+void UniformMatrix4fv GLint GLsizei GLboolean const_GLfloat*
+void UniformMatrix2x3fv GLint GLsizei GLboolean const_GLfloat*
+void UniformMatrix3x2fv GLint GLsizei GLboolean const_GLfloat*
+void UniformMatrix2x4fv GLint GLsizei GLboolean const_GLfloat*
+void UniformMatrix4x2fv GLint GLsizei GLboolean const_GLfloat*
+void UniformMatrix3x4fv GLint GLsizei GLboolean const_GLfloat*
+void UniformMatrix4x3fv GLint GLsizei GLboolean const_GLfloat*
+void UniformBlockBinding GLuint GLuint GLuint
+GLboolean UnmapBuffer GLenum
+void UseProgram GLuint
+
+
+void ValidateProgram GLuint
+void VertexAttrib1f GLuint GLfloat
+void VertexAttrib1s GLuint GLshort
+void VertexAttrib1d GLuint GLdouble
+void VertexAttribI1i GLuint GLint
+void VertexAttribI1ui GLuint GLuint
+void VertexAttrib2f GLuint GLfloat GLfloat
+void VertexAttrib2s GLuint GLshort GLshort
+void VertexAttrib2d GLuint GLdouble GLdouble
+void VertexAttribI2i GLuint GLint GLint
+void VertexAttribI2ui GLuint GLuint GLuint
+void VertexAttrib3f GLuint GLfloat GLfloat GLfloat
+void VertexAttrib3s GLuint GLshort GLshort GLshort
+void VertexAttrib3d GLuint GLdouble GLdouble GLdouble
+void VertexAttribI3i GLuint GLint GLint GLint
+void VertexAttribI3ui GLuint GLuint GLuint GLuint
+void VertexAttrib4f GLuint GLfloat GLfloat GLfloat GLfloat
+void VertexAttrib4s GLuint GLshort GLshort GLshort GLshort
+void VertexAttrib4d GLuint GLdouble GLdouble GLdouble GLdouble
+void VertexAttrib4Nub GLuint GLubyte GLubyte GLubyte GLubyte
+void VertexAttribI4i GLuint GLint GLint GLint GLint
+void VertexAttribI4ui GLuint GLuint GLuint GLuint GLuint
+void VertexAttrib1fv GLuint const_GLfloat*
+void VertexAttrib1sv GLuint const_GLshort*
+void VertexAttrib1dv GLuint const_GLdouble*
+void VertexAttribI1iv GLuint const_GLint*
+void VertexAttribI1uiv GLuint const_GLuint*
+void VertexAttrib2fv GLuint const_GLfloat*
+void VertexAttrib2sv GLuint const_GLshort*
+void VertexAttrib2dv GLuint const_GLdouble*
+void VertexAttribI2iv GLuint const_GLint*
+void VertexAttribI2uiv GLuint const_GLuint*
+void VertexAttrib3fv GLuint const_GLfloat*
+void VertexAttrib3sv GLuint const_GLshort*
+void VertexAttrib3dv GLuint const_GLdouble*
+void VertexAttribI3iv GLuint const_GLint*
+void VertexAttribI3uiv GLuint const_GLuint*
+void VertexAttrib4fv GLuint const_GLfloat*
+void VertexAttrib4sv GLuint const_GLshort*
+void VertexAttrib4dv GLuint const_GLdouble*
+void VertexAttrib4iv GLuint const_GLint*
+void VertexAttrib4bv GLuint const_GLbyte*
+void VertexAttrib4ubv GLuint const_GLubyte*
+void VertexAttrib4usv GLuint const_GLushort*
+void VertexAttrib4uiv GLuint const_GLuint*
+void VertexAttrib4Nbv GLuint const_GLbyte*
+void VertexAttrib4Nsv GLuint const_GLshort*
+void VertexAttrib4Niv GLuint const_GLint*
+void VertexAttrib4Nubv GLuint const_GLubyte*
+void VertexAttrib4Nusv GLuint const_GLushort*
+void VertexAttrib4Nuiv GLuint const_GLuint*
+void VertexAttribI4bv GLuint const_GLbyte*
+void VertexAttribI4ubv GLuint const_GLubyte*
+void VertexAttribI4sv GLuint const_GLshort*
+void VertexAttribI4usv GLuint const_GLushort*
+void VertexAttribI4iv GLuint const_GLint*
+void VertexAttribI4uiv GLuint const_GLuint*
+void VertexAttribP1ui GLuint GLenum GLboolean GLuint
+void VertexAttribP2ui GLuint GLenum GLboolean GLuint
+void VertexAttribP3ui GLuint GLenum GLboolean GLuint
+void VertexAttribP4ui GLuint GLenum GLboolean GLuint
+void VertexAttribDivisor GLuint GLuint
+void VertexAttribPointer GLuint GLint GLenum GLboolean GLsizei const_GLvoid*
+void VertexAttribIPointer GLuint GLint GLenum GLsizei const_GLvoid*
+void Viewport GLint GLint GLsizei GLsizei
+ 
+// --W-- 
+void WaitSync GLsync GLbitfield GLuint64
+

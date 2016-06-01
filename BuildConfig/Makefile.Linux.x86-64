@@ -1,0 +1,30 @@
+#	BuildConfig/Makefile.Linux.x86-64
+#	Author: Patrick Baggett <ptbaggett@762studios.com>
+#	Created: 7/25/2011
+#
+#	Purpose:
+#
+#	Makefile for Linux running on 64-bit x86 architecture processors
+#
+#	License:
+#
+#	This program is free software. It comes without any warranty, to
+#	the extent permitted by applicable law. You can redistribute it
+#	and/or modify it under the terms of the Do What The Fuck You Want
+#	To Public License, Version 2, as published by Sam Hocevar. See
+#	http://sam.zoy.org/wtfpl/COPYING for more details.
+
+# All C/C++ compiler flags required by this OS platform
+OS_CXXFLAGS := -m64 -D_UNIX=1 -I/usr/local/include
+OS_CFLAGS := -m64 -D_UNIX=1 -I/usr/local/include
+
+include BuildConfig/GCC-Flags.rules
+include BuildConfig/POSIX-Libs.rules
+
+ASM := yasm -f elf64 -m amd64
+RANLIB := ranlib
+SUBSYSTEM := POSIX
+
+CWD = $(shell pwd)
+# All flags/libraries the linker will need
+OS_LDFLAGS := -m64 -L/usr/local/lib64 -Wl,-rpath,/usr/local/lib64

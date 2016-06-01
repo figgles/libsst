@@ -1,0 +1,84 @@
+#	BuildConfig/DetectPlatform.rules
+#	Author: Patrick Baggett <ptbaggett@762studios.com>
+#	Created: 11/15/2011
+#
+#	Purpose:
+#
+#	OS/architecture detection rules. Requires GNU Make
+#
+#	License:
+#
+#	This program is free software. It comes without any warranty, to
+#	the extent permitted by applicable law. You can redistribute it
+#	and/or modify it under the terms of the Do What The Fuck You Want
+#	To Public License, Version 2, as published by Sam Hocevar. See
+#	http://sam.zoy.org/wtfpl/COPYING for more details.
+
+# Allow user overrides of $OS and $ARCH
+
+#==============================
+# Detect operating system
+#==============================
+ifeq ($(OS),)
+	OS := $(shell uname)
+	ifeq ($(OS),SunOS)
+		OS := Solaris
+	endif
+	ifeq ($(findstring Windows,$(OS)),Windows) # *Windows* -> Windows
+		OS := Windows
+	endif
+
+	ifeq ($(findstring MINGW,$(OS)),MINGW) # *MINGW* -> Windows
+		OS := Windows
+	endif
+endif
+
+# Detect when the Win32 environment variable "Windows_NT" is set and normalize it
+ifeq ($(OS),Windows_NT)
+	OS := Windows
+endif
+
+#==============================
+# Detect processor arch
+# =============================
+ifeq ($(ARCH),)
+	ifeq ($(OS),Solaris) #Solaris likes "-p" instead of "-m"
+		ARCH := $(shell uname -p)
+	else
+		ARCH := $(shell uname -m)
+	endif
+	
+	#Replace "i<x>86" with "x86", where <x> can be [x, digit]
+	ARCH := $(shell echo $(ARCH) | sed s/i[x0-9]86/x86/)
+	
+	#Replace "powerpc" with "ppc"
+	ARCH := $(shell echo $(ARCH) | sed s/powerpc/ppc/)
+
+	ifeq ($(ARCH),sparc64) #Linux on UltraSPARC gives sparc64 when running 64-bit kernel
+		ARCH := sparc
+	endif
+
+	ifeq ($(ARCH),mips64) #Linux/mips64 kernel, but probably don't want 64-bit app
+		ARCH := mips
+	endif	
+	
+	ifeq ($(ARCH),amd64) # "amd64" -> "x86-64"
+		ARCH := x86-64
+	endif
+	
+	ifeq ($(ARCH),x86_64) # "x86_64" -> "x86-64"
+		ARCH := x86-64
+	endif
+	
+	ifeq ($(ARCH),armv6l) # "armv6l" -> "arm"
+		ARCH := arm
+		SUBARCH := armv6
+	endif
+
+	ifeq ($(ARCH),armv7l) # "armv7l" -> "arm
+		ARCH := arm
+		SUBARCH := armv7
+	endif
+	
+endif
+

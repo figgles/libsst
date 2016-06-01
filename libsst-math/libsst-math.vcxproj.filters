@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SST_Geo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Mat22d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Mat22f.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Mat22i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Mat22u.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Mat33d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Mat33f.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Mat33i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Mat33u.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Mat44d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Mat44f.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Mat44i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Mat44u.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Transform.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Vec2d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Vec2f.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Vec2i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Vec2u.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Vec3d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Vec3f.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Vec3i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Vec3u.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Vec4d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Vec4f.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Vec4i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SST_Vec4u.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Lib\Include\SST\SST_Mat22.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lib\Include\SST\SST_Mat33.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lib\Include\SST\SST_Mat44.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lib\Include\SST\SST_Math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lib\Include\SST\SST_Transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lib\Include\SST\SST_Vec2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lib\Include\SST\SST_Vec3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lib\Include\SST\SST_Vec4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lib\Include\SST\SST_Geo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

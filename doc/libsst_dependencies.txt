@@ -1,0 +1,40 @@
+========================
+libsst-atomic, libsst-os
+========================
+
+1. x86, x64 CPUs
+--------------------------------------------
+yasm, the modular assembler project.
+
+REQUIRE VERSION: 1.2.0+
+
+Homepage: http://yasm.tortall.net/
+Binaries: http://yasm.tortall.net/Download.html
+Direct Links:
+ * 32-bit Windows: http://www.tortall.net/projects/yasm/releases/vsyasm-1.3.0-win32.zip
+ * 64-bit Windows: http://www.tortall.net/projects/yasm/releases/vsyasm-1.3.0-win64.zip
+
+
+1.1 YASM - VISUAL STUDIO 2015 INSTALL
+--------------------------------------------
+YASM easily with Visual Studio, but you need admin permissions to install it. The *.props files has been modified
+from the 1.3.0 download. Please use the one included in the subdirectory "vsyasm-2015".
+
+ 1. Download the the 32-bit or 64-bit EXE depending on whether you are running 32-bit or 64-bit Windows.
+ 2. Extract vsyasm.exe to %PROGRAM FILES%\Microsoft Visual Studio 14.0\VC\bin
+ 3. Copy files from vsyasm-2015/ to %PROGRAM FILES%\MSBuild\Microsoft.Cpp\v4.0\V140\BuildCustomizations
+
+1.2 YASM - LINUX INSTALL
+--------------------------------------------
+Use your favorite package manager to install YASM and make sure it is available in your PATH.
+
+Fedora, Red Hat: yum install yasm
+Debian, Ubuntu: apt-get install yasm
+
+1.3 YASM - SOLARIS INSTALL
+--------------------------------------------
+Build it from source or try a package management system such as opencsw.
+
+
+
+

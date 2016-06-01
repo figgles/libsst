@@ -1,0 +1,33 @@
+#	BuildConfig/Makefile.Linux.ppc
+#	Author: Patrick Baggett <ptbaggett@762studios.com>
+#	Created: 7/20/2012
+#
+#	Purpose:
+#
+#	Makefile for Linux running on Power Arch. processors, 32-bit binary
+#
+#	License:
+#
+#	This program is free software. It comes without any warranty, to
+#	the extent permitted by applicable law. You can redistribute it
+#	and/or modify it under the terms of the Do What The Fuck You Want
+#	To Public License, Version 2, as published by Sam Hocevar. See
+#	http://sam.zoy.org/wtfpl/COPYING for more details.
+
+# All C++ compiler flags required by this OS platform
+OS_CXXFLAGS := -m32 -D_UNIX=1 -I/usr/local/include
+OS_CFLAGS := -m32 -D_UNIX=1 -I/usr/local/include
+
+# Assume GCC here
+include BuildConfig/GCC-Flags.rules
+
+# Linux uses POSIX-like libraries
+include BuildConfig/POSIX-Libs.rules
+
+ASM := as -mregnames
+RANLIB := ranlib
+SUBSYSTEM := POSIX
+
+# Flags for linker: 32-bit binary, and use "/usr/local/lib" in the path
+OS_LDFLAGS := -m32 -L/usr/local/lib -Wl,-rpath,/usr/local/lib
+
